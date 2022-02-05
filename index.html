@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .frem{
+        width: 13rem;
+        height: 13rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .frem .chak{
+        width: 191px;
+        height: 191px;
+        position: absolute;
+        background-color: #00ff43;
+        border-radius: 50%;
+        display: none;
+        justify-content: flex-end;
+        align-items: flex-end;
+    }
+    .frem .chak img{
+        width: 51px;
+        z-index: 2;
+        position: absolute;
+        right: 7px;
+    }
+    .frem .logo{
+        width: 10rem;
+        height: 10rem;
+        border-radius: 50%;
+        background: url(./img.jpg);
+        background-position: -32px 0px;
+        background-size: 13rem;
+        background-repeat: no-repeat;
+        cursor: pointer;
+        z-index: 1;
+    }
+</style>
+
+<body>
+    <div class="frem">
+        <div class="chak" id="tick">
+            <img src="./tick-mark.png" alt="">
+        </div>
+        <div class="logo" onclick="tickmark()"></div>
+    </div>
+</body>
+<script>
+    function tickmark() {
+        var x = document.getElementById('tick');
+        if (x.style.display === "flex") {
+            x.style.display = "none";
+        } else {
+            x.style.display = "flex";
+        }
+    }
+</script>
+</html>
